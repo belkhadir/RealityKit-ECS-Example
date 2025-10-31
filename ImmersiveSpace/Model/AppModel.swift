@@ -5,9 +5,8 @@
 //  Created by belkhadir on 23/9/2025.
 //
 
-import RealityKit
-import Foundation
 import UIKit
+import RealityKit
 
 @Observable
 final class AppModel {

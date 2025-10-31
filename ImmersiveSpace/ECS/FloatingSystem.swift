@@ -7,7 +7,7 @@
 
 import RealityKit
 
-struct FloatingSystem: System {
+final class FloatingSystem: System {
     private let query = EntityQuery(where: .has(FloatingComponent.self))
     
     init(scene: Scene) {}
