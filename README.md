@@ -4,6 +4,8 @@ An example project that demonstrates how to build an **immersive RealityKit scen
 
 This project accompanies the tutorial published on **[SwiftOrbit.io](https://swiftorbit.io/realitykit-ecs-immersive-scene/)**
 
+![RealityKit ECS Floating Bricks Demo](realitykit-ecs-floating-bricks-visionos.gif)
+
 ## Overview
 
 This example shows how to:
