@@ -6,20 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		49F9657E2E80561400A28445 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 49F9657D2E80561400A28445 /* RealityKitContent */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		49F965782E80561400A28445 /* ImmersiveSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImmersiveSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		49F9657C2E80561400A28445 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
 		49F965862E80561600A28445 /* Exceptions for "ImmersiveSpace" folder in "ImmersiveSpace" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				App/Info.plist,
 			);
 			target = 49F965772E80561400A28445 /* ImmersiveSpace */;
 		};
@@ -41,7 +36,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49F9657E2E80561400A28445 /* RealityKitContent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +46,6 @@
 			isa = PBXGroup;
 			children = (
 				49F9657A2E80561400A28445 /* ImmersiveSpace */,
-				49F9657B2E80561400A28445 /* Packages */,
 				49F965792E80561400A28445 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,14 +56,6 @@
 				49F965782E80561400A28445 /* ImmersiveSpace.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		49F9657B2E80561400A28445 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				49F9657C2E80561400A28445 /* RealityKitContent */,
-			);
-			path = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,7 +78,6 @@
 			);
 			name = ImmersiveSpace;
 			packageProductDependencies = (
-				49F9657D2E80561400A28445 /* RealityKitContent */,
 			);
 			productName = ImmersiveSpace;
 			productReference = 49F965782E80561400A28445 /* ImmersiveSpace.app */;
@@ -163,7 +147,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_FILE = "$(TARGET_NAME)/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -191,7 +175,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_FILE = "$(TARGET_NAME)/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -351,13 +335,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		49F9657D2E80561400A28445 /* RealityKitContent */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RealityKitContent;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 49F965702E80561400A28445 /* Project object */;
 }
