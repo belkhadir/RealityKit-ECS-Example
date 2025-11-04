@@ -7,23 +7,27 @@
 
 import SwiftUI
 import RealityKit
-import RealityKitContent
 
 struct ContentView: View {
     @Environment(AppModel.self) var model
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
-    @State var isLoading = false
+    @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
     
     var body: some View {
-        Button("Open Immersive Space") {
+        let buttonText = model.isImmersiveOpen ? "Dismiss Immersive Space": "Open Immersive Space"
+        Button(buttonText) {
             Task {
-                isLoading = true
                 await model.addBrick()
-                isLoading = false
-                await openImmersiveSpace(id: "ImmersiveScene")
+                if model.isImmersiveOpen {
+                    await dismissImmersiveSpace()
+                    model.isImmersiveOpen = false
+                } else {
+                    await openImmersiveSpace(id: "ImmersiveScene")
+                    model.isImmersiveOpen = true
+                }
             }
-        }
-        if isLoading {
+        }.disabled(model.isLoadingAssets)
+        if model.isLoadingAssets {
             ProgressView()
         }
     }

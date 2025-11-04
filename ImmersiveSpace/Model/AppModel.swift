@@ -11,6 +11,8 @@ import RealityKit
 @Observable
 final class AppModel {
     private let modelCount = 200
+    var isLoadingAssets = false
+    var isImmersiveOpen = false
     let rootEntity = Entity()
     
     init() {
@@ -18,10 +20,13 @@ final class AppModel {
     }
     
     func addBrick() async {
+        isLoadingAssets = true
         for _ in 0..<modelCount {
             let brick = try! await createBrick()
             rootEntity.addChild(brick)
         }
+        
+        isLoadingAssets = false
     }
 }
 
